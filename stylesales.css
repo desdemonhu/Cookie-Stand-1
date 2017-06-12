@@ -1,0 +1,31 @@
+body,html{
+  background-color: gray;
+}
+#a{
+
+}
+.b{
+  display: inline;
+  background-color: white;
+  margin-top: 10%;
+  margin-right: 5%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  border-color: black;
+  border: 5px;
+  float:right;
+
+}
+#c{
+
+}
+#x{
+  float: left;
+  margin-top: 20%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  padding-left: 25%;
+}
+
+.

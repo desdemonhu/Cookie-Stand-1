@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html>
+<!---needs more CSS and a dynamic table, it will be grand when I am finished withit-->
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Daily Sales Projections</title>
-  <script src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesales.css">
+  <title>daily sales</title>
 </head>
-<body>
-  <title><h2>Daily Sales</h2></title>
-
-  <section id='a'>
-  <table class="table1">
-    <thead>
-      <tr>
-        <th>Pike</th>
-        <th>Capital Hill</th>
-        <th>SeaTac</th>
-        <th>Alki</th>
+<div class='b'>
+<table id='c'> <h2>Table</h2>
+     <thead id="dynamic-table"> <!--change name before submittal-->
+<thead id= "head">
+  <tr id= 'a'>
+                <th> 6:00AM</th>
+                <th>7:00AM</th>
+                <th>8:00AM</th>
+                <th>9:00AM</th>
+                <th>10:00AM</th>
+                <th> 11:00AM</th>
+                <th>12:00AM</th>
+                <th>1:00PM</th>
+                <th>2:00PM</th>
+                <th>3:00PM</th>
+                <th>4:00PM</th>
+                <th> 5:00PM</th>
+                <th>5:00PM</th>
+                <th>7:00PM</th>
+                <th>8:00PM</th>
       </tr>
-    </thead>
-  <tbody>
-    <tr>
-    <td>Things</td>
-      <td>shite</td>
-        <td>stuff</td>
-          <td>more things</td>
-  </tr>
-  </tbody>
-</section>
-</table>
-</body>
-</html>
+</thead>
+     <tbody id= 'x'>
+       <tr class= 'y'>Pike</tr>
+        <tr>Alki</tr>
+         <tr>caphill</tr>
+          <tr>Seacenter</tr>
+           <tr class= 'y'>seatac</tr>
 
-<!---the results from the .js page are supposed to populate and update here, I suspect in a table so they can be tracked by the user.
+     </tbody>
+   </table>
+ </div>
+   <script src="app.js" type="text/javascript"></script>
+ </body>
+
+
+
+
+
+ <!--<tr id = "hours">
+
+</html>
