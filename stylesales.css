@@ -1,31 +1,55 @@
-body,html{
+body{
   background-color: gray;
-}
-#a{
 
 }
-.b{
+
+h2 {
+  text-align: center;
+  font-size:24;
+
+}
+
+div{
+  margin-top:15%;
+  margin-left:0%;
+  background-color:gray;
+  width: inherit;
+}
+
+
+# table{
   display: inline;
   background-color: white;
   margin-top: 10%;
   margin-right: 5%;
   margin-bottom: 10%;
-  margin-left: 5%;
+  margin-left: 50%;
   border-color: black;
   border: 5px;
   float:right;
 
 }
-#c{
+th,td{
+width:10%;
+border: 2px solid #090101;
+padding:7px;
+border-spacing: 15px;
+
 
 }
-#x{
-  float: left;
-  margin-top: 20%;
-  margin-right: 5%;
-  margin-bottom: 5%;
-  margin-right: 5%;
-  padding-left: 25%;
-}
 
-.
+th {
+  border-color: black;
+  border-bottom: 5px;
+  border-top: 2px solid #090101;
+  border-color: black;
+  background-color:#d8d8d8;
+}
+tr.tr {
+  border-color: black;
+  border-bottom: 5px;
+  border-top: 5px;
+  border-color: black;
+  background-color:white;
+
+}

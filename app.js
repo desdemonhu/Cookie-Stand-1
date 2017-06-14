@@ -10,6 +10,10 @@ function Location(shop,hourlysales,dailytotal) {
   this.hourlySales = hourlysales;
   this.dailyTotal = dailytotal;
 }
+
+//use an array for hours?
+//function to push hours onto table?
+//hard code hours to HTML?  more better;
 function makeRow(Location) {
   //create element
   var newRowEl = document.createElement('tr');
