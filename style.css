@@ -1,3 +1,22 @@
 body,html{
-  background-color:  #C6BCAE;
+  background-color:  #642D28;
+}
+
+div {
+  background-color:#C6BCAE;
+  font family:inherit;
+    padding: 1%;
+    border: 2px solid #EDDEC8;
+}
+
+.parent{
+  background-color:#EDDEC8;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10%;
+
+}
+
+h2 {
+  text-align: center;
 }
