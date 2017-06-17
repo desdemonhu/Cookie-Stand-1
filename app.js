@@ -71,6 +71,7 @@ var tableEl = document.getElementById('x');
 // var tableBodyEl = document.createElement('tbody');
 //tableEl.appendChild(newRowEl);
 
+///TODO: Create the rest of the stores. Maybe if you feel like it put them in a store array; Loop through each store in the array to print out the rows
 pike.makeRow();
 
 var formEl = document.getElementById('form');
