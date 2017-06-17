@@ -5,12 +5,30 @@
 // //reference book and lecture on youtube for review
 //
 // // //object constructors
-function Location(shop,hourlysales,dailytotal) {
+function Location(shop, min, max, avgc) {
   this.location = shop;
-  this.hourlySales = hourlysales;
-  this.dailyTotal = dailytotal;
+  this.min = min;
+  this.max = max;
+  this.avgc = avgc;
+  this.hourlySales = cookiesPerHour(this);
+  //this.dailyTotal = dailytotal;
 }
-function makeRow(Location) {
+function hourlysale(min, max, avgc){
+  var customers = Math.floor(Math.random() * (max - min + 1) + min);
+  var cookiesPerHour = Math.ceil(customers * avgc);
+  return cookiesPerHour;
+}
+
+function cookiesPerHour(location){
+  var cookiePower = [];
+  for(var i = 0; i < 15; i++){
+    cookiePower.push(hourlysale(location.min, location.max, location.avgc));
+  }
+  console.log(cookiePower);
+  return cookiePower;
+}
+
+Location.protoype.makeRow = function(){
   //create element
   var newRowEl = document.createElement('tr');
   var locationDataEl = document.createElement('tr');
@@ -22,13 +40,15 @@ function makeRow(Location) {
   dailyTotalEL.textContent = pike.dailytotal;
   //append to child
   tableBodyEl.appendChild(newRowEl);
-}
+};
 
-var alki = new Location('alki','hourlysales','dailytotal');
-var pike = new Location('pike','hourlysales','totalsales');
-var seacenter = new Location('seacenter','hourlysales','totalsales');
-var caphill = new Location('caphill','hourlysales','totalsales');
-var seatac = new Location('seatac','hourlysales','totalsales');
+var pike = new Location('pike', 23, 65, 6.3);
+
+// var alki = new Location('alki','hourlysales','dailytotal');
+// var pike = new Location('pike','hourlysales','totalsales');
+// var seacenter = new Location('seacenter','hourlysales','totalsales');
+// var caphill = new Location('caphill','hourlysales','totalsales');
+// var seatac = new Location('seatac','hourlysales','totalsales');
 // console.log(alki);
 // console.log(pike);
 // console.log(seacenter); // all of these console's were successfull
