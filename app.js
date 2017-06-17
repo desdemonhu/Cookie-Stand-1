@@ -28,21 +28,31 @@ function cookiesPerHour(location){
   return cookiePower;
 }
 
-Location.protoype.makeRow = function(){
+Location.prototype.makeRow = function(){
   //create element
-  var newRowEl = document.createElement('tr');
-  var locationDataEl = document.createElement('tr');
-  var hourlySalesEl = document.createElement('tr');
-  var dailyTotalEL = document.createElement ('tr');
+  // var newRowEl = document.createElement('tr');
+  var locationDataEl = document.createElement('td');
+  locationDataEl.textContent = this.location;
+  newRowEl.appendChild(locationDataEl);
+
+  var dailyTotalEL = document.createElement ('td');
   //Configure "mutate"
-  locationDataEl.textContent = pike.shop;
-  hourlySalesEl.textContent = pike.hourlysales;
-  dailyTotalEL.textContent = pike.dailytotal;
+  // locationDataEl.textContent = this.shop;
+
+  for(var i = 0; i < this.hourlySales.length; i++){
+    var hourlySalesEl = document.createElement('td');
+    hourlySalesEl.textContent = this.hourlySales[i];
+    newRowEl.appendChild(hourlySalesEl);
+  }
+
+  // dailyTotalEL.textContent = this.dailytotal;
   //append to child
-  tableBodyEl.appendChild(newRowEl);
+  // newRowEl.appendChild(dailyTotalEL);
+  tableEl.appendChild(newRowEl);
 };
 
 var pike = new Location('pike', 23, 65, 6.3);
+console.log(pike);
 
 // var alki = new Location('alki','hourlysales','dailytotal');
 // var pike = new Location('pike','hourlysales','totalsales');
@@ -55,9 +65,12 @@ var pike = new Location('pike', 23, 65, 6.3);
 // console.log(caphill);
 // console.log(seatac);
 
-var tableEl = document.getElementById('dynamic-table');
+var tableEl = document.getElementById('x');
 var newRowEl = document.createElement('tr');
-var tableBodyEl = document.createElement('tbody');
-tableEl.appendChild(tableBodyEl);
+// tableEl.appendChild(newRowEl);
+// var tableBodyEl = document.createElement('tbody');
+//tableEl.appendChild(newRowEl);
 
-makeRow(pike); //If I get it correctly each function call requires specifying the name of the Variable in the configuration(?)
+pike.makeRow();
+
+// pike.makeRow(); //If I get it correctly each function call requires specifying the name of the Variable in the configuration(?)
