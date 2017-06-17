@@ -30,7 +30,7 @@ function cookiesPerHour(location){
 
 Location.prototype.makeRow = function(){
   //create element
-  // var newRowEl = document.createElement('tr');
+  var newRowEl = document.createElement('tr');
   var locationDataEl = document.createElement('td');
   locationDataEl.textContent = this.location;
   newRowEl.appendChild(locationDataEl);
@@ -66,11 +66,30 @@ console.log(pike);
 // console.log(seatac);
 
 var tableEl = document.getElementById('x');
-var newRowEl = document.createElement('tr');
+// var newRowEl = document.createElement('tr');
 // tableEl.appendChild(newRowEl);
 // var tableBodyEl = document.createElement('tbody');
 //tableEl.appendChild(newRowEl);
 
 pike.makeRow();
+
+var formEl = document.getElementById('form');
+formEl.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+  console.log(event.target.newStore.value);
+
+  var location = event.target.newStore.value;
+  var min = event.target.min.value;
+  var max = event.target.max.value;
+  var avgc = event.target.avgc.value;
+
+  var newStore = new Location(location,min,max,avgc);
+  var newStoreRowEl = document.createElement('tr');
+  tableEl.appendChild(newStoreRowEl);
+
+  newStore.makeRow();
+}
 
 // pike.makeRow(); //If I get it correctly each function call requires specifying the name of the Variable in the configuration(?)
